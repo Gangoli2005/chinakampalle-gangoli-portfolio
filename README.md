@@ -2,7 +2,7 @@
 
 A high-performance, single-page developer portfolio showcasing data analytics projects, interactive dashboards, and technical competencies.
 
-**Live site:** https://YOUR-SITE-URL/
+**Live site:** https://chinakampalle-gangoli-portfolio.vercel.app/
 
 ## Tech Stack
 
