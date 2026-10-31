@@ -11,7 +11,7 @@ export const personalInfo = {
   location: "Banglore",
   phone: "6303821230",
   emails: {
-    primary: "gangoli112005@gmail.com",
+    primary: "gangoli200511@gmail.com",
     secondary: "",
   },
   summary: "I am a Data Analyst where I can perform operations on data to extract actionable insights and drive business value.",
@@ -37,7 +37,7 @@ export const heroContent = {
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:gangoli112005@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
+    href: "mailto:gangoli200511@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
   },
   ctaResume: { text: "Download Resume", href: "/resume.pdf" },
 };
