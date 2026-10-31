@@ -37,15 +37,13 @@ export default function About() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ type: 'spring', stiffness: 110, damping: 9, mass: 1.1 }}
-            className="relative pt-8 flex flex-col items-center"
+            className="relative pt-8 flex flex-col items-center w-full"
           >
-            {/* Lanyard String */}
-            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-3 h-40 bg-black rounded-b-sm z-0" />
+            {/* Black Lanyard String */}
+            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-3 h-40 bg-black z-0" />
 
-            {/* Grey Metal Clip */}
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-gray-400 rounded-sm shadow-md z-20 flex items-center justify-center">
-              <div className="w-3 h-1.5 bg-gray-600 rounded-xs" />
-            </div>
+            {/* Grey Clip Rectangle */}
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-gray-400 rounded-sm shadow z-20" />
 
             {/* Flip Card Wrapper Button */}
             <button
@@ -59,8 +57,8 @@ export default function About() {
                 className="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d]"
                 style={{ transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
               >
-                {/* FRONT Face: ID Badge with Cutout Slot & Portrait */}
-                <div className="absolute inset-0 [backface-visibility:hidden] z-10 bg-gray-900 rounded-2xl p-3 shadow-2xl flex flex-col border border-white/10">
+                {/* FRONT face: Dark badge card with cutout slot and portrait */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-gray-900 rounded-2xl p-3 shadow-2xl flex flex-col">
                   <div className="w-10 h-2 bg-black/80 rounded-full mx-auto mb-2 shrink-0" />
                   <img
                     src={stackImage}
@@ -69,9 +67,9 @@ export default function About() {
                   />
                 </div>
 
-                {/* BACK Face: Visiting Card */}
-                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-gradient-to-br from-[#141414] to-[#1f1f1f] shadow-2xl overflow-hidden flex flex-col justify-between p-5 border border-white/10 text-white">
-                  {/* Red Top Bar */}
+                {/* BACK face: Visiting Card */}
+                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-gradient-to-br from-[#141414] to-[#1f1f1f] p-5 text-white text-left flex flex-col justify-between overflow-hidden shadow-2xl">
+                  {/* Top 6px Red Bar */}
                   <div className="absolute top-0 left-0 right-0 h-[6px] bg-[#ff2a2a]" />
 
                   {/* Top: Identity */}
@@ -80,20 +78,20 @@ export default function About() {
                       {personalInfo.brandName}
                       <span className="text-[#ff2a2a]">.</span>
                     </h3>
-                    <p className="text-[10px] uppercase tracking-widest text-red-400 font-semibold mt-0.5">
+                    <p className="text-xs uppercase tracking-widest text-red-400 font-semibold mt-0.5">
                       {personalInfo.title}
                     </p>
-                    <div className="h-[1px] bg-white/10 my-2" />
+                    <div className="border-b border-white/10 my-2.5" />
 
                     {/* Contact Rows */}
-                    <div className="space-y-1.5">
+                    <div className="space-y-2">
                       {personalInfo.emails?.primary && (
                         <a
                           href={`mailto:${personalInfo.emails.primary}`}
                           onClick={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors truncate"
                         >
-                          <svg className="w-3.5 h-3.5 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                           </svg>
                           <span className="truncate">{personalInfo.emails.primary}</span>
@@ -106,7 +104,7 @@ export default function About() {
                           onClick={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors"
                         >
-                          <svg className="w-3.5 h-3.5 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
                             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                           </svg>
                           <span>{personalInfo.phone}</span>
@@ -115,7 +113,7 @@ export default function About() {
 
                       {personalInfo.location && (
                         <div className="flex items-center gap-2 text-xs text-white/85">
-                          <svg className="w-3.5 h-3.5 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                           </svg>
                           <span>{personalInfo.location}</span>
@@ -130,7 +128,7 @@ export default function About() {
                           onClick={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors"
                         >
-                          <svg className="w-3.5 h-3.5 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                           </svg>
                           <span>LinkedIn</span>
@@ -145,7 +143,7 @@ export default function About() {
                           onClick={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors"
                         >
-                          <svg className="w-3.5 h-3.5 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-red-400 shrink-0 fill-current" viewBox="0 0 24 24">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                           </svg>
                           <span>GitHub</span>
@@ -154,9 +152,9 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Bottom: QR Code */}
+                  {/* Bottom: QR Code & Caption */}
                   <div className="flex items-center gap-3 pt-2">
-                    <div className="bg-white p-1.5 rounded-lg shrink-0 shadow">
+                    <div className="bg-white p-2 rounded-lg shrink-0 shadow">
                       <QRCode
                         value={socialLinks.linkedin || `mailto:${personalInfo.emails?.primary}`}
                         size={76}
