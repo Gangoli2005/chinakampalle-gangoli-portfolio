@@ -15,7 +15,7 @@ export const personalInfo = {
     secondary: "",
   },
   summary: "I am a Data Analyst where I can perform operations on data to extract actionable insights and drive business value.",
-  resumeUrl: "https://drive.google.com/file/d/1PVg8hpLZc_jrcGD7e9kzWxhvpDTMNQ_6/view?usp=sharing",
+  resumeUrl: "/resume.pdf",
 };
 
 // TAP Academy — the academy you trained with. Used in the footer credit.
@@ -39,7 +39,7 @@ export const heroContent = {
     text: "Contact Me",
     href: "mailto:gangoli112005@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
   },
-  ctaResume: { text: "Download Resume", href: "https://drive.google.com/file/d/1PVg8hpLZc_jrcGD7e9kzWxhvpDTMNQ_6/view?usp=sharing" },
+  ctaResume: { text: "Download Resume", href: "/resume.pdf" },
 };
 
 export const aboutContent = {
