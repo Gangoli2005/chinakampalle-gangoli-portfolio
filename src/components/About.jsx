@@ -62,7 +62,7 @@ export default function About() {
                   <div className="w-10 h-2 bg-black/80 rounded-full mx-auto mb-2 shrink-0" />
                   <img
                     src={stackImage}
-                    alt={personalInfo?.name || 'Illustrated Portrait'}
+                    alt="CHINAKAMPALLE GANGOLI — DATA ANALYST, TAP Academy student"
                     className="w-full flex-1 rounded-xl object-cover object-top shadow-inner"
                   />
                 </div>
