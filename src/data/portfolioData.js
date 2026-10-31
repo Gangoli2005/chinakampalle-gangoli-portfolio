@@ -11,10 +11,10 @@ export const personalInfo = {
   location: "Banglore",
   phone: "6303821230",
   emails: {
-    primary: "gangoli200511@gmail.com",
+    primary: "gangoli112005@gmail.com",
     secondary: "",
   },
-  summary: "I am a Data Analyst where I can perform meaningful operations and analyses on data to drive impactful business decisions.",
+  summary: "I am a Data Analyst where I can perform operations on data to extract actionable insights and drive business value.",
   resumeUrl: "https://drive.google.com/file/d/1PVg8hpLZc_jrcGD7e9kzWxhvpDTMNQ_6/view?usp=sharing",
 };
 
@@ -37,7 +37,7 @@ export const heroContent = {
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:gangoli200511@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
+    href: "mailto:gangoli112005@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
   },
   ctaResume: { text: "Download Resume", href: "https://drive.google.com/file/d/1PVg8hpLZc_jrcGD7e9kzWxhvpDTMNQ_6/view?usp=sharing" },
 };
@@ -45,13 +45,13 @@ export const heroContent = {
 export const aboutContent = {
   heading: "Hello!",
   // HTML is allowed here (it is rendered with dangerouslySetInnerHTML)
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">CHINAKAMPALLE GANGOLI</span>, an aspiring Data Analyst based in Banglore. I specialize in performing operations on data, discovering patterns, and building dashboards to solve real-world business challenges, sharpening my skills through the placement training program at TAP Academy.`,
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">CHINAKAMPALLE GANGOLI</span>, an aspiring Data Analyst based in Banglore. I became a data analyst to get a job in a good company with a good position, sharpening my skills through the placement training program at TAP Academy.`,
   techStack: ["Python", "MySQL", "Pandas", "NumPy", "Power BI", "Tableau"],
 };
 
 export const skillsContent = {
   badge: "My Process",
-  heading: "Here's how I turn data into real-world business insights",
+  heading: "Here's how I turn ideas into real-world products",
   description: "A structured, end-to-end analytical approach to solve data-driven challenges.",
   cards: [
     { number: "01", title: "Research", text: "Identify key business questions, data sources, and analytical metrics." },
